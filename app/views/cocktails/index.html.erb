@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+    <dif class="col">
+      <%= render partial: "index_header" %>
+    </dif>
+  </div>
+</div>
+<div class="container">
+    <div class="row justify-content-between">
+  <% @cocktails.each do |cocktail|%>
+      <dif class="col-4">
+        <li> <%= render partial: "card", locals: {cocktail: cocktail} %> </li>
+      </dif>
+  <% end %>
+    </div>
+</div>

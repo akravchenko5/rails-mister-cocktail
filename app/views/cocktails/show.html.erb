@@ -1,0 +1,14 @@
+<h1><%= @cocktail.name %></h1>
+
+
+  <div class="d-flex">
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.ingredient.name %></p>
+      <p class="pl-2"><%= dose.description %></p>
+      <%= link_to "Delete", dose_path(dose),
+      method: :delete,
+      data: { confirm: "Are you sure?" }%>
+    <% end %>
+  </div>
+
+<%= link_to "Back to list", cocktails_path %>
