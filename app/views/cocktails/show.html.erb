@@ -1,14 +1,32 @@
-<h1><%= @cocktail.name %></h1>
-
-
-  <div class="d-flex">
-    <% @cocktail.doses.each do |dose| %>
-      <p><%= dose.ingredient.name %></p>
-      <p class="pl-2"><%= dose.description %></p>
-      <%= link_to "Delete", dose_path(dose),
-      method: :delete,
-      data: { confirm: "Are you sure?" }%>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <dif class="col">
+      <%= render partial: "show_page", locals: {cocktail: @cocktail} %>
+    </dif>
   </div>
+</div>
 
-<%= link_to "Back to list", cocktails_path %>
+<div class="container show-ingrediens pb-5">
+  <div class="row">
+    <div class="col">
+    <h3>Ingredients:</h3>
+     <% @cocktail.doses.each do |dose| %>
+     <div>
+      <div class="card-product">
+        <img src="https://www.brindledistillery.co.uk/wp-content/uploads/2019/08/RHG-3.jpg" />
+        <div class="card-product-infos">
+          <h2><%= dose.ingredient.name %></h2>
+          <p><strong><%= dose.description %></strong></p>
+          <%= link_to "Delete", dose_path(dose),
+            method: :delete,
+            data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm mt-2"%>
+        </div>
+      </div>
+     </div>
+    <% end %>
+    </div>
+  </div>
+<%= link_to "Back to list", cocktails_path, class: "btn btn-primary mt-5"%>
+</div>
+
+
