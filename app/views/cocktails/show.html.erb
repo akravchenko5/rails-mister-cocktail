@@ -13,7 +13,7 @@
      <% @cocktail.doses.each do |dose| %>
      <div>
       <div class="card-product">
-        <img src="https://www.brindledistillery.co.uk/wp-content/uploads/2019/08/RHG-3.jpg" />
+        <img src= <%= dose.ingredient.img_url %> />
         <div class="card-product-infos">
           <h2><%= dose.ingredient.name %></h2>
           <p><strong><%= dose.description %></strong></p>
@@ -26,7 +26,10 @@
     <% end %>
     </div>
   </div>
-<%= link_to "Back to list", cocktails_path, class: "btn btn-primary mt-5"%>
+  <div class="col-3 d-flex justify-content-between mt-5 p-0">
+    <%= link_to "Back to list", cocktails_path, class: "btn btn-outline-light"%>
+    <%= link_to "Add dring", new_cocktail_dose_path(@cocktail), class: "btn btn-outline-warning"%>
+  </div>
 </div>
 
 

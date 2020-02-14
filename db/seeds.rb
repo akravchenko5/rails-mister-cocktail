@@ -22,15 +22,15 @@ Cocktail.create!(cocktails_attributes)
 
 Ingredient.destroy_all
 ingredients_attributes = [
-  { name: 'Light rum' },
-  { name: 'Applejack' },
-  { name: 'Gin' },
-  { name: 'Dark rum' },
-  { name: 'Sweet Vermouth' },
-  { name: 'Strawberry schnapps' },
-  { name: 'Scotch' },
-  { name: 'Southern Comfort' },
-  { name: 'Brandy' }
+  { name: 'Light rum', img_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRmza7vtwAfeQX8B4eHmIpyTUM3bjQUx_dB4pieXfoqcyAy6GgJ' },
+  { name: 'Applejack', img_url: 'https://spiritsreview.com/wp-content/uploads/2018/07/IMGP0339-e1532069437925.jpg' },
+  { name: 'Gin', img_url: 'https://www.brindledistillery.co.uk/wp-content/uploads/2019/08/RHG-3.jpg' },
+  { name: 'Dark rum', img_url: 'https://i0.wp.com/drinkhacker.com/wp-content/uploads/2019/10/ten-to-one-rum.jpg?fit=1237%2C1080&ssl=1' },
+  { name: 'Sweet Vermouth', img_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsFYilIm1HOizF6EjmWBxoF43RaddmMuAIXwAkCa4asOu75a2c' },
+  { name: 'Strawberry schnapps', img_url: 'https://www.austriansupermarket.com/media/catalog/product/cache/2/image/800x800/9df78eab33525d08d6e5fb8d27136e95/t/o/tos170656.jpg' },
+  { name: 'Scotch', img_url: 'https://img.thewhiskyexchange.com/900/w-liq_dub1.jpg' },
+  { name: 'Southern Comfort', img_url: 'https://cdn11.bigcommerce.com/s-b0811/images/stencil/original/products/1518/15254/southern_comfort_original__39830.1536336415.jpg?c=2&imbypass=on' },
+  { name: 'Brandy', img_url: 'https://s3-us-west-2.amazonaws.com/distiller-blog-prod/wp-content/uploads/2019/08/20164942/lairds.jpg' }
 ]
 Ingredient.create!(ingredients_attributes)
 puts 'Finished!'
