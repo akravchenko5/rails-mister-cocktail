@@ -5,7 +5,7 @@
         <%= f.input :description %>
         <%= f.association :ingredient %>
          <div class="d-flex justify-content-between">
-          <%= link_to "Back to list", cocktails_path, class: "btn btn-primary" %>
+          <%= link_to "Back to list", root_path, class: "btn btn-primary" %>
           <%= f.button :submit, class: "btn btn-warning" %>
         </div>
       <% end %>
