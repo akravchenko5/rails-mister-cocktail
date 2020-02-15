@@ -7,9 +7,9 @@
   </div>
 </div>
 <div class="container">
-  <div class="row justify-content-between">
+  <div class="row">
     <% @cocktails.each do |cocktail|%>
-      <dif class="col-4">
+      <dif class="col-4 ">
         <div> <%= render partial: "card", locals: {cocktail: cocktail} %> </div>
       </dif>
     <% end %>
