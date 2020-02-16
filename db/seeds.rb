@@ -21,11 +21,11 @@ cocktails_attributes = [
 ]
 # Cocktail.create!(cocktails_attributes)
 
-# cocktails_attributes.each_with_index do |cocktail, index|
-#   file = URI.open(cocktail[:img_url])
-#   cocktail = Cocktail.create!(name: cocktail[:name])
-#   cocktail.photo.attach(io: file, filename: "cocktail#{index}.jpg", content_type: 'image/jpg')
-# end
+cocktails_attributes.each_with_index do |cocktail, index|
+  file = URI.open(cocktail[:img_url])
+  cocktail = Cocktail.create!(name: cocktail[:name])
+  cocktail.photo.attach(io: file, filename: "cocktail#{index}.jpg", content_type: 'image/jpg')
+end
 
 Ingredient.destroy_all
 ingredients_attributes = [
