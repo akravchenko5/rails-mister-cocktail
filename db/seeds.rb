@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 puts 'Creating seeds...'
 Cocktail.destroy_all
 cocktails_attributes = [
@@ -18,7 +19,13 @@ cocktails_attributes = [
   { name: 'Salted caramel pecan sour', img_url: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/12/salted-caramel-pecan-sours.jpg?itok=2vq2M_Qx' },
   { name: 'Frozen margarita', img_url: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2019/05/frozen-margarita.jpg?itok=rQ3ozxhT' }
 ]
-Cocktail.create!(cocktails_attributes)
+# Cocktail.create!(cocktails_attributes)
+
+# cocktails_attributes.each_with_index do |cocktail, index|
+#   file = URI.open(cocktail[:img_url])
+#   cocktail = Cocktail.create!(name: cocktail[:name])
+#   cocktail.photo.attach(io: file, filename: "cocktail#{index}.jpg", content_type: 'image/jpg')
+# end
 
 Ingredient.destroy_all
 ingredients_attributes = [
@@ -34,3 +41,4 @@ ingredients_attributes = [
 ]
 Ingredient.create!(ingredients_attributes)
 puts 'Finished!'
+

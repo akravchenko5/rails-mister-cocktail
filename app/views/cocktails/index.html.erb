@@ -10,7 +10,7 @@
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail|%>
-      <dif class="col-4 ">
+      <dif class="col-sm-12 col-md-6 col-lg-4 ">
         <div> <%= render partial: "card", locals: {cocktail: cocktail} %> </div>
       </dif>
     <% end %>
